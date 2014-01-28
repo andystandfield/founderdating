@@ -1,0 +1,147 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+$fd-blue: #00BDFF;
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.btn {
+	-webkit-transition: background-color 500ms;
+	-moz-transition: background-color 500ms;
+	-o-transition: background-color 500ms;
+	transition: background-color 500ms;
+}
+
+.btn-primary {
+	background-color: $fd-blue;
+	border: none;
+	-webkit-transition:all 500ms;
+	-moz-transition:all 500ms;
+	-o-transition:all 500ms;
+	transition:all 500ms;
+}
+
+.navbar {
+	border-bottom: 4px solid $fd-blue;
+}
+
+.navbar-header a.navbar-brand {
+	background-image: url('../img/fd-logo-white-no-background.png');
+	background-repeat: no-repeat;
+	background-position: left center;
+	width: 175px;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+img.front-illustration {
+	display: block;
+	width: 80%;
+	height: auto;
+	margin: 0 auto 40px auto;
+}
+
+.lead-header {
+	margin-top: 0;
+	margin-bottom: 1em;
+}
+
+.jumbotron {
+	border-bottom: 2px solid $fd-blue;
+}
+
+.jumbotron h3 {
+	margin-top: 0;
+	margin-bottom: 1.5em;
+}
+
+.call-to-action p {
+	margin-bottom: 1em;
+}
+
+.brand-highlight {
+	color: $fd-blue;
+}
+
+.btn.connect-now {
+	padding: 24px;
+}
+
+.how-it-works .col-lg-4 {
+	padding: 0 20px;
+}
+
+.how-it-works {
+	text-align: center;
+}
+
+.how-it-works h1 {
+	text-align: center;
+	font-weight: 700;
+}
+
+.how-it-works h2 {
+	text-align: center;
+	color: $fd-blue;
+}
+
+.how-it-works img {
+	display: block;
+	width: auto;
+	height: 75px;
+	margin: 20px auto;
+}
+
+.modal-dialog {
+	padding: 0 !important;
+	border: 10px solid #000;
+	border-top: none;
+	text-align: left;
+}
+
+.modal-dialog div {
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+}
+
+.modal-header {
+	background-color: $fd-blue;
+	color: #fff;
+}
+
+ul.checklist {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+ul.checklist li {
+	padding: 10px;
+	display: block;
+}
+
+ul.checklist li:nth-child(even) {
+	background-color: #eee;
+}
+
+ul.checklist label:hover {
+	color: $fd-blue;
+	cursor: pointer;
+}
+
+ul.checklist label {
+	margin-left: 15px;
+}
+
+footer {
+	text-align: right;
+}
+
+
+

@@ -1,0 +1,167 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 8, ../sass/main.scss */
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* line 12, ../sass/main.scss */
+.btn {
+  -webkit-transition: background-color 500ms;
+  -moz-transition: background-color 500ms;
+  -o-transition: background-color 500ms;
+  transition: background-color 500ms;
+}
+
+/* line 19, ../sass/main.scss */
+.btn-primary {
+  background-color: #00bdff;
+  border: none;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -o-transition: all 500ms;
+  transition: all 500ms;
+}
+
+/* line 28, ../sass/main.scss */
+.navbar {
+  border-bottom: 4px solid #00bdff;
+}
+
+/* line 32, ../sass/main.scss */
+.navbar-header a.navbar-brand {
+  background-image: url("../img/fd-logo-white-no-background.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  width: 175px;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* line 42, ../sass/main.scss */
+img.front-illustration {
+  display: block;
+  width: 80%;
+  height: auto;
+  margin: 0 auto 40px auto;
+}
+
+/* line 49, ../sass/main.scss */
+.lead-header {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+/* line 54, ../sass/main.scss */
+.jumbotron {
+  border-bottom: 2px solid #00bdff;
+}
+
+/* line 58, ../sass/main.scss */
+.jumbotron h3 {
+  margin-top: 0;
+  margin-bottom: 1.5em;
+}
+
+/* line 63, ../sass/main.scss */
+.call-to-action p {
+  margin-bottom: 1em;
+}
+
+/* line 67, ../sass/main.scss */
+.brand-highlight {
+  color: #00bdff;
+}
+
+/* line 71, ../sass/main.scss */
+.btn.connect-now {
+  padding: 24px;
+}
+
+/* line 75, ../sass/main.scss */
+.how-it-works .col-lg-4 {
+  padding: 0 20px;
+}
+
+/* line 79, ../sass/main.scss */
+.how-it-works {
+  text-align: center;
+}
+
+/* line 83, ../sass/main.scss */
+.how-it-works h1 {
+  text-align: center;
+  font-weight: 700;
+}
+
+/* line 88, ../sass/main.scss */
+.how-it-works h2 {
+  text-align: center;
+  color: #00bdff;
+}
+
+/* line 93, ../sass/main.scss */
+.how-it-works img {
+  display: block;
+  width: auto;
+  height: 75px;
+  margin: 20px auto;
+}
+
+/* line 100, ../sass/main.scss */
+.modal-dialog {
+  padding: 0 !important;
+  border: 10px solid #000;
+  border-top: none;
+  text-align: left;
+}
+
+/* line 107, ../sass/main.scss */
+.modal-dialog div {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+/* line 113, ../sass/main.scss */
+.modal-header {
+  background-color: #00bdff;
+  color: #fff;
+}
+
+/* line 118, ../sass/main.scss */
+ul.checklist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* line 124, ../sass/main.scss */
+ul.checklist li {
+  padding: 10px;
+  display: block;
+}
+
+/* line 129, ../sass/main.scss */
+ul.checklist li:nth-child(even) {
+  background-color: #eee;
+}
+
+/* line 133, ../sass/main.scss */
+ul.checklist label:hover {
+  color: #00bdff;
+  cursor: pointer;
+}
+
+/* line 138, ../sass/main.scss */
+ul.checklist label {
+  margin-left: 15px;
+}
+
+/* line 142, ../sass/main.scss */
+footer {
+  text-align: right;
+}
