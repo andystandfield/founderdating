@@ -1,0 +1,94 @@
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased; }
+
+html {
+  font-size: 16px; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  padding: 20px 0; }
+
+p {
+  margin-top: 0; }
+
+.wrapper {
+  width: 100%;
+  max-width: 1280px;
+  *zoom: 1; }
+  .wrapper:before, .wrapper:after {
+    content: " ";
+    display: table; }
+  .wrapper:after {
+    clear: both; }
+  .wrapper .results {
+    *zoom: 1; }
+    .wrapper .results:before, .wrapper .results:after {
+      content: " ";
+      display: table; }
+    .wrapper .results:after {
+      clear: both; }
+
+.person_card {
+  position: relative;
+  background-color: #F2F2F2;
+  padding: 10px;
+  border: 1px solid #D8D8D8;
+  border-radius: 5px;
+  margin: 10px;
+  width: calc(25% - 20px);
+  height: 150px;
+  float: left;
+  overflow: hidden;
+  *zoom: 1; }
+  .person_card:before, .person_card:after {
+    content: " ";
+    display: table; }
+  .person_card:after {
+    clear: both; }
+  .person_card .card_header {
+    margin-bottom: 30px;
+    max-height: 60px;
+    overflow: hidden;
+    *zoom: 1; }
+    .person_card .card_header:before, .person_card .card_header:after {
+      content: " ";
+      display: table; }
+    .person_card .card_header:after {
+      clear: both; }
+    .person_card .card_header h2 {
+      font-size: 1rem;
+      font-weight: normal;
+      margin: 0 0 0 70px; }
+    .person_card .card_header h3 {
+      font-size: 0.8rem;
+      font-weight: normal;
+      margin: 0 0 0 70px;
+      color: #969696; }
+    .person_card .card_header .photo {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      display: block;
+      width: 60px;
+      height: 60px; }
+  .person_card .interests_header {
+    position: absolute;
+    top: 60px;
+    left: 10px;
+    color: #00bdff;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    margin-bottom: 0; }
+  .person_card .interests_list {
+    position: absolute;
+    top: 90px;
+    width: calc(100% - 20px);
+    font-size: 0.75rem;
+    max-height: 32px;
+    overflow: hidden; }
+  .person_card:hover {
+    border: 1px solid #00bdff;
+    cursor: pointer; }
