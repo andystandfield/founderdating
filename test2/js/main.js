@@ -1,7 +1,16 @@
 
 function peopleResults(sort){
 	$.getJSON( "js/people.json", function( data ) {
-		var people = [];
+		var people = [], favorites = [];
+
+		var cookie = $.cookie("favCookie");
+
+		if(typeof cookie != 'undefined') {
+			var cookie_vals = cookie.split(",");
+		}
+
+		console.log(cookie);
+
 		$.each( data.people, function( i, val ) {
 			people.push( val );
 		});
@@ -29,9 +38,7 @@ function peopleResults(sort){
 
 			var pInterests_list = pInterests.split(",");
 
-			console.log("list: " + pInterests_list.length + " pInterests: " + pInterests.length);
-
-			$("<div class='person_card' id='" + pID + "' data-ID='" + pID + "'></div>").appendTo("#search_results");
+			$("<div class='person_card' id='" + pID + "' data-ID='" + pID + "'><div class='favorite icon-star'></div></div>").appendTo("#search_results");
 
 			$("<div class='card_header'></div>").appendTo("#" + pID);
 
@@ -50,12 +57,35 @@ function peopleResults(sort){
 			});
 		});
 
-		console.log(people.length);
+		//let's set the favorites
+		$.each( cookie_vals, function(star) {
+			$("#" + cookie_vals[star] + " .favorite").addClass("favorited");
+			console.log(cookie_vals[star]);
+			console.log("*");
+		});
+
+		$( ".favorite" ).click( function() {
+			var favID = $(this).parent().data( "id" );
+			var index = favorites.indexOf(favID);
+
+			if ($(this).hasClass( "favorited" )) {
+				$(this).removeClass( "favorited" );
+				favorites.splice(index, 1);
+				$.cookie("favCookie", favorites);
+				console.log($.cookie("favCookie"));
+			} else {
+				$(this).addClass( "favorited" );
+				favorites.push(favID);
+				$.cookie("favCookie", favorites);
+				console.log($.cookie("favCookie"));
+			}
+		});
 	});
 
 }
 
 $(document).ready(function(){
+//	$.removeCookie('favCookie');
 
 	peopleResults();
 
@@ -64,5 +94,4 @@ $(document).ready(function(){
 	});
 
 });
-
  
