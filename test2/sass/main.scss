@@ -23,12 +23,18 @@ p {
 .wrapper {
 	width: 100%;
 	max-width: 1280px;
+	margin: 0 auto;
 	@include clearfix;
 
 	.results {
 
 		@include clearfix;
 	}
+}
+
+.controls {
+	margin-bottom: 20px;
+	padding: 0 10px;
 }
 
 .person_card {
@@ -41,7 +47,6 @@ p {
 	width: calc(25% - 20px);
 	height: 150px;
 	float: left;
-	overflow: hidden;
 	@include clearfix;
 
 	.card_header {
@@ -85,15 +90,67 @@ p {
 
 	.interests_list {
 		position: absolute;
-		top: 90px;
-		width: calc(100% - 20px);
+		top: 80px;
+		left: 5px;
+		z-index: 1000;
+		width: calc(100% - 10px);
 		font-size: 0.75rem;
-		max-height: 32px;
 		overflow: hidden;
-	}
 
-	&:hover {
-		border: 1px solid $fd-blue;
-		cursor: pointer;
+		ul {
+			list-style: none;
+			display: block;
+			padding: 10px;
+			height: 35px;
+			text-overflow: ellipsis;
+			border: 1px solid transparent;
+			border-radius: 3px;
+
+			li {
+				display: inline-block;
+
+				&::after {
+					content: ",\00a0";
+				}
+
+
+				&:last-child::after {
+					content: "";
+				}
+			}
+
+			&:hover {
+				height: auto;
+				background-color: #fefefe;
+				border: 1px solid #D8D8D8;
+				z-index: 1000;
+			}
+		}
 	}
 }
+
+@media (max-width: 1000px) {
+
+	.person_card {
+		width: calc(33.333% - 20px);
+	}
+}
+
+@media (max-width: 750px) {
+
+	.person_card {
+		width: calc(50% - 20px);
+	}
+}
+
+
+@media (max-width: 540px) {
+
+	.person_card {
+		width: calc(100% - 20px);
+	}
+}
+
+
+
+
