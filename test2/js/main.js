@@ -7,9 +7,10 @@ function peopleResults(sort){
 
 		if(typeof cookie != 'undefined') {
 			var cookie_vals = cookie.split(",");
+			favorites = cookie_vals;
+		} else {
+			$.cookie("favCookie", "temp");
 		}
-
-		console.log(cookie);
 
 		$.each( data.people, function( i, val ) {
 			people.push( val );
@@ -43,9 +44,9 @@ function peopleResults(sort){
 			$("<div class='card_header'></div>").appendTo("#" + pID);
 
 			if (pPictureURL === "") {
-				$("<img class='photo' src='/img/nopic.png'>").appendTo("#" + pID + " div.card_header");
+				$("<img class='photo' src='img/nopic.png'>").appendTo("#" + pID + " div.card_header");
 			} else {
-				$("<img class='photo' src='" + pPictureURL + "' onerror='this.src=\"/img/nopic.png\"'>").appendTo("#" + pID + " div.card_header");
+				$("<img class='photo' src='" + pPictureURL + "' onerror='this.src=\"img/nopic.png\"'>").appendTo("#" + pID + " div.card_header");
 			}
 
 			$("<h2 class='name'>" + pName + "</h2>").appendTo("#" + pID + " .card_header");
@@ -59,9 +60,9 @@ function peopleResults(sort){
 
 		//let's set the favorites
 		$.each( cookie_vals, function(star) {
-			$("#" + cookie_vals[star] + " .favorite").addClass("favorited");
-			console.log(cookie_vals[star]);
-			console.log("*");
+			if (cookie_vals[star] != "") {
+				$("#" + cookie_vals[star] + " .favorite").addClass("favorited");
+			}
 		});
 
 		$( ".favorite" ).click( function() {
@@ -72,12 +73,10 @@ function peopleResults(sort){
 				$(this).removeClass( "favorited" );
 				favorites.splice(index, 1);
 				$.cookie("favCookie", favorites);
-				console.log($.cookie("favCookie"));
 			} else {
 				$(this).addClass( "favorited" );
 				favorites.push(favID);
 				$.cookie("favCookie", favorites);
-				console.log($.cookie("favCookie"));
 			}
 		});
 	});
@@ -92,6 +91,7 @@ $(document).ready(function(){
 	$( "#sort_order" ).change(function() {
 		peopleResults($( "#sort_order" ).val());
 	});
+
 
 });
  
