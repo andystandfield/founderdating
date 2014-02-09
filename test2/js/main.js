@@ -50,12 +50,18 @@ function peopleResults(sort){
 			}
 
 			$("<h2 class='name'>" + pName + "</h2>").appendTo("#" + pID + " .card_header");
-			$("<h3 class='location'>" + pLocation + "</h3>").appendTo("#" + pID + " .card_header");
+			$("<h3 class='location'><i class='icon-location'></i>" + pLocation + "</h3>").appendTo("#" + pID + " .card_header");
 			$("<h3 class='interests_header'>Interests</h2>").appendTo("#" + pID);
 			$("<div class='interests_list'><ul></ul></div>").appendTo("#" + pID);
 			$.each( pInterests_list, function( interest ) {
 				$("<li>" + pInterests_list[interest] + "</li>").appendTo("#" + pID + " .interests_list ul");
+				var interests_content = $("#" + pID + " .interests_list ul").text().length;
+				if (interests_content > 60){
+					$("#" + pID + " .interests_list ul").addClass("long");
+					console.log(pID + ": " + interests_content);
+				}
 			});
+
 		});
 
 		//let's set the favorites
@@ -91,7 +97,6 @@ $(document).ready(function(){
 	$( "#sort_order" ).change(function() {
 		peopleResults($( "#sort_order" ).val());
 	});
-
 
 });
  

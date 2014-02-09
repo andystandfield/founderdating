@@ -34,7 +34,9 @@ html {
 
 body {
   font-family: 'Open Sans', sans-serif;
-  padding: 20px 0; }
+  padding: 20px 0;
+  background-color: #F2F2F2;
+  color: #333; }
 
 p {
   margin-top: 0; }
@@ -60,12 +62,42 @@ p {
 
 .controls {
   margin-bottom: 20px;
-  padding: 0 10px; }
+  padding: 0 10px;
+  *zoom: 1; }
+  .controls:before, .controls:after {
+    content: " ";
+    display: table; }
+  .controls:after {
+    clear: both; }
+  .controls .sort {
+    float: left; }
+  .controls .pages {
+    float: right; }
+    .controls .pages ul {
+      list-style: none;
+      display: block;
+      padding: 0;
+      margin: 0; }
+      .controls .pages ul li {
+        display: inline-block; }
+        .controls .pages ul li a {
+          color: #333;
+          display: block;
+          text-decoration: none;
+          border: 1px solid #D8D8D8;
+          padding: 3px 5px;
+          border-radius: 3px;
+          background-color: rgba(255, 255, 255, 0.6);
+          -webkit-transition: all 400ms;
+          -moz-transition: all 400ms;
+          transition: all 400ms; }
+          .controls .pages ul li a:hover {
+            background-color: #fff; }
 
 .person_card {
   position: relative;
-  background-color: #F2F2F2;
-  padding: 10px;
+  background-color: #F9F9F9;
+  padding: 0 10px 10px;
   border: 1px solid #D8D8D8;
   border-radius: 5px;
   margin: 10px;
@@ -79,23 +111,22 @@ p {
   .person_card:after {
     clear: both; }
   .person_card .card_header {
-    margin-bottom: 30px;
-    max-height: 60px;
+    margin: 0 0 0 -10px;
+    height: 80px;
+    width: calc(100% + 20px);
     overflow: hidden;
-    *zoom: 1; }
-    .person_card .card_header:before, .person_card .card_header:after {
-      content: " ";
-      display: table; }
-    .person_card .card_header:after {
-      clear: both; }
+    border-bottom: 1px solid #D8D8D8;
+    background-color: #FFF;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px; }
     .person_card .card_header h2 {
       font-size: 1rem;
       font-weight: normal;
-      margin: 0 0 0 70px; }
+      margin: 10px 0 0 80px; }
     .person_card .card_header h3 {
       font-size: 0.8rem;
       font-weight: normal;
-      margin: 0 0 0 70px;
+      margin: 0 0 0 80px;
       color: #969696; }
     .person_card .card_header .photo {
       position: absolute;
@@ -106,7 +137,7 @@ p {
       height: 60px; }
   .person_card .interests_header {
     position: absolute;
-    top: 60px;
+    top: 70px;
     left: 10px;
     color: #00bdff;
     font-size: 0.9rem;
@@ -114,45 +145,49 @@ p {
     margin-bottom: 0; }
   .person_card .interests_list {
     position: absolute;
-    top: 80px;
-    left: 5px;
+    top: 90px;
+    left: -1px;
     z-index: 1000;
-    width: calc(100% - 10px);
+    width: calc(100% + 2.5px);
     font-size: 0.75rem;
     overflow: hidden; }
     .person_card .interests_list ul {
       list-style: none;
       display: block;
-      padding: 10px;
-      height: 35px;
-      text-overflow: ellipsis;
-      border: 1px solid transparent;
-      border-radius: 3px; }
+      padding: 0 10px 10px;
+      height: 25px;
+      border-width: 0 1px 1px;
+      border-style: solid;
+      border-color: transparent;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px; }
       .person_card .interests_list ul li {
         display: inline-block; }
         .person_card .interests_list ul li::after {
           content: ",\00a0"; }
         .person_card .interests_list ul li:last-child::after {
           content: ""; }
-      .person_card .interests_list ul:hover {
+      .person_card .interests_list ul.long:hover {
         height: auto;
-        background-color: #fefefe;
-        border: 1px solid #D8D8D8;
+        background-color: #F9F9F9;
+        border-width: 0 1px 1px;
+        border-style: solid;
+        border-color: #D8D8D8;
         z-index: 1000; }
   .person_card .favorite {
     position: absolute;
     top: 0;
     right: 0;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     background-color: #fff;
     border-left: 1px solid #D8D8D8;
     border-bottom: 1px solid #D8D8D8;
     border-top-right-radius: 4px; }
     .person_card .favorite:before {
       display: block;
-      margin-left: 2px;
-      margin-top: 1px;
+      margin-left: 6px;
+      margin-top: 5px;
       color: #eee; }
     .person_card .favorite:hover {
       color: #EDB844;
