@@ -261,6 +261,16 @@ p {
 	.person_card {
 		width: calc(50% - 20px);
 	}
+
+	.controls .sort {
+		margin-bottom: 20px;
+		clear: both;
+	}
+
+	.controls .pages {
+		float: left;
+		clear: both;
+	}
 }
 
 
